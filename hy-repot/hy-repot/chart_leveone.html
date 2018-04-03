@@ -1,0 +1,573 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>尚佳报表系统图表系统</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"
+    />
+    <link href="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery.ui.1.10.2.ie.css"
+    />
+    <![endif]-->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link href="assets/css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/libs/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js">
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/lodash.compat.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/libs/html5shiv.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="plugins/touchpunch/jquery.ui.touch-punch.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.move.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.swipe.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/breakpoints.js">
+    </script>
+    <script type="text/javascript" src="plugins/respond/respond.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/cookie/jquery.cookie.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.horizontal.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="plugins/flot/excanvas.min.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/app.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.form-components.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            App.init();
+            Plugins.init();
+            FormComponents.init()
+        });
+    </script>
+
+</head>
+
+<body style="background: #F5F6FA">
+<header class="header navbar navbar-fixed-top" role="banner">
+    <!--<div class="container">-->
+    <ul class="nav navbar-nav">
+        <li class="nav-toggle">
+            <a href="javascript:void(0);" title="">
+                <i class="icon-reorder">
+                </i>
+            </a>
+        </li>
+    </ul>
+    <a class="navbar-brand">
+        <img src="assets/img/index/home_logo.png" alt="logo" style="height: 40px;margin-top: 3px;margin-left: 20px"/>
+    </a>
+    <a href="#" class="toggle-sidebar bs-tooltip" data-placement="bottom">
+        <img src="assets/img/index/home_nav.png" style="height: 30px;margin-top: 10px">
+    </a>
+    <div class="nav-rights" style="margin-right: 20px">
+        <div class="nav-rights">
+            <a href="login.html">
+                <div></div>
+            </a>
+        </div>
+        <div class="nav-rights">
+            <span id="username"></span>
+        </div>
+
+        <!--</div>-->
+
+    </div>
+</header>
+<div id="container">
+    <div id="sidebar" class="sidebar-fixed">
+        <div id="sidebar-content">
+            <ul id="nav">
+                <li  id="index" class="current delettop delectbac displaynone">
+                    <a href="index.html">
+                        • &nbsp;首页
+                    </a>
+                </li>
+                <li id="down_1" class="li-down displaynone" style="margin-top: 0px!important;">
+                    <a href="table_top.html">
+                        五维总览
+                    </a>
+                </li>
+                <li id="down_9" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        考勤报表
+                    </a>
+                </li>
+                <li id="down_2" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        推广报表
+                    </a>
+                </li>
+                <li id="down_3" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        销售报表
+                    </a>
+                </li>
+                <li id="down_4" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        在线报表
+                    </a>
+                </li>
+                <li id="down_5" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        中端报表
+                    </a>
+                </li>
+                <li id="down_6" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        后端报表
+                    </a>
+                </li>
+                <li id="down_10" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        财务报表
+                    </a>
+                </li>
+                <li id="down_11" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表A
+                    </a>
+                </li>
+                <li id="down_12" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表B
+                    </a>
+                </li>
+                <li  id="down_8"  class="li-down displaynone">
+                    <a href="chart_leveone.html">
+                        业务图
+
+                    </a>
+                </li>
+                <li id="down_7" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        个人中心
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="insert_user.html">
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="role_user.html">
+                                角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="date_manage.html">
+                                数据源管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="report_manage.html">
+                                报表管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+
+            <div class="row">
+                <div class="col-md-12" style="margin-top: 10px!important;">
+                    <div class="widget box" id="down" style=" border-radius: 5px!important;clear: both">
+                        <div class="widget-content" style="border-radius: 10px!important;">
+                            <div class="col-md-11" style="padding-right: 0px!important;margin-left: -40px">
+                                <div class="col-md-12 data" style="padding-right: 0px">
+                                    <div class="select_title" style="margin-left: 15px">时&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;间:</div>
+                                    <div class='time-content'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker1'>
+                                                <input id="startTime" type='text' class="form-control inputde"
+                                                       placeholder="开始日期"/>
+                                                         <span class="input-group-addon">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                            </div>
+                                        </div>
+                                    </div>
+                                    <div class='time-content'>
+                                        <div class="form-group">
+                                            <div class='input-group date' id='datetimepicker2'>
+                                                <input id="endTime" type='text' class="form-control inputde"
+                                                       placeholder="结束时间"/>
+                                                 <span class="input-group-addon" style="">
+                                                     <div class="icon-triangle"></div>
+                                                 </span>
+                                            </div>
+                                        </div>
+                                    </div>
+
+                                    <div class="clearfix"></div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">维&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;度:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="legion_name" style="display: none">%</p>
+                                                    <input id="legion_name_input" type='text'
+                                                           class="form-control inputde" value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="legion_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">项目经理:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="pm" style="display: none">%</p>
+                                                    <input id="pm_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="pm_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">负&nbsp;&nbsp;责&nbsp;人:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="resp_account" style="display: none">%</p>
+                                                    <input id="resp_account_input" type='text'
+                                                           class="form-control inputde" value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="resp_account_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">流量中心:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="flow_name" style="display: none">%</p>
+                                                    <input id="flow_name_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="flow_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">站点名称:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="site_name" style="display: none!important;">%</p>
+                                                    <input id="site_name_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="site_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">域&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;名:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="realm" style="display: none">%</p>
+                                                    <input id="realm_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="realm_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">渠&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;道:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="ad" style="display: none">%</p>
+                                                    <input id="ad_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="ad_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="province" style="display: none">%</p>
+                                                    <input id="province_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="province_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">载&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;体:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="carrier" style="display: none">%</p>
+                                                    <input id="carrier_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="carrier_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">推广类型:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="promotion" style="display: none">%</p>
+                                                    <input id="promotion_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="promotion_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">项&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;目:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="sku" style="display: none">%</p>
+                                                    <input id="sku_input" type='text' class="form-control inputde"
+                                                           value="全选"/>
+                                                         <span class="input-group-addon down-ul" style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="sku_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                            </div>
+                            <div class="col-md-1" style="padding: 0px">
+                                <button id="creat_chart" type="button" class="btn  right-button blue">生成表格</button>
+                                <div class="clearfix"></div>
+                                <button id="resert_chart" type="button" class="btn  right-button gray">重置表格</button>
+                                <br>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+
+                </div>
+                <div class="col-md-12">
+
+                    <div class="table-title">
+                        <div class="widget-header" style="float: right">
+                            <div class="toolbar no-padding" id="loaddown">
+                                <div class="btn-group" style="background: transparent;border: none">
+                                 <span class="btn btn-xs widget-collapse"
+                                       style="background: transparent;border: none;outline: none">
+                                     <i class="icon-angle-down" style="font-size: 40px">
+                                     </i>
+                                 </span>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <div class="charts-content">
+                        <div id="proportion_on" class="charts-level" style="width: 80%;margin: auto">
+                            <img id="img_1" src="assets/img/chart/red.png" style="width: 100%;display: block;margin: auto;background: transparent;position: relative;;z-index: 600;">
+                            <div id="show_on"  class="show_count left-1" style="font-size: 25px;"></div>
+                           <!-- <span disabled style="width: 100px;position: absolute;font-size: 16px;color: #F05D65;bottom: 3%;margin-top: -15px;z-index: 900;left: 95%"><span id="proportion_on"></span></span>
+-->
+                        </div>
+                        <div id="proportion_tw" class="charts-level" style="width: 65%;display: block;margin: auto;margin-top: -3%;">
+
+                            <img id="img_2" src="assets/img/chart/orange.png" style="width: 100%;position: relative;;z-index: 500;">
+                           <div id="show_tw"  class="show_count left-2" style="font-size: 23px;top: 60%;"></div>
+                               <!--<span style="width: 100px;position: absolute;font-size: 16px;color: #FC7C5E;bottom: 3%;margin-top: -15px;z-index: 900;left: 90%"><span
+                                        id="proportion_tw"></span></span>
+-->
+
+                        </div>
+                        <div id="proportion_th" class="charts-level" style="width: 50%;display: block;margin: auto;margin-top: -3%;">
+                            <img id="img_3" src="assets/img/chart/yellow.png"
+                                 style="width:100%;position: relative;;z-index: 400;">
+                                <div id="show_th" class="show_count left-3" style="font-size: 22px;top: 60%"></div>
+                               <!--<span style="width: 180px;position: absolute;font-size: 16px;color: #FFE454;bottom: 3%;margin-top: -15px;z-index: 900;left: 90%"><span
+                                        id="proportion_th"></span></span>-->
+                        </div>
+                        <div id="proportion_fo" class="charts-level" style="width: 35%;display: block;margin: auto;margin-top: -3%;">
+                            <img id="img_4" src="assets/img/chart/green.png"
+                                 style="width:100%;position: relative;;z-index: 300;">
+                            <div id="show_fo" class="show_count left-4" style="font-size: 18px;;top: 60%;"></div>
+                              <!-- <span style="width: 100px;position: absolute;font-size: 16px;color: #6BD1F6;bottom: 3%;margin-top: -15px;z-index: 900;left: 90%"><span
+                                        id="proportion_fo"></span></span>-->
+
+
+                        </div>
+                        <div class="charts-level" style="width: 20%;display: block;margin: auto;margin-top: -3%;">
+                            <img id="img_5" src="assets/img/chart/blue.png"
+                                 style="width:100%;position: relative;;z-index: 200;">
+                                <div id="show_fi" class="show_count left-5"
+                                      style="font-size: 16px;top: 40%;"></div>
+
+                        </div>
+                        <img src="assets/img/chart/shadow.png"
+                             style="width: 30%;display: block;margin: auto;margin-top: -4%;position: relative;;z-index: 100;">
+                    </div>
+                </div>
+
+            </div>
+        </div>
+        <div class="load">
+            <div id="center">
+                <div class="skype-loader">
+                    <div class="dot">
+                        <div class="first"></div>
+                    </div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="margin-top: 150px">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>-->
+                <h2 class="modal-title">提示</h2>
+            </div>
+            <div class="modal-body">
+                <span id="myModalLabel" style="font-size: 20px;"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./plugins/bootstrap-datetimepicker/moment-with-locales.min.js"></script>
+<script src="./plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<script src="./plugins/bootstrap-datetimepicker/init.js"></script>
+<script type="text/javascript" src="./assets/js/service/ajax.js"></script>
+<script type="text/javascript" src="./assets/js/service/common.js"></script>
+<!--<script type="text/javascript" src="./assets/js/echarts/echarts.min.js"></script>-->
+<script type="text/javascript" src="./assets/js/service/charts_leveone.js"></script>
+</body>
+
+</html>

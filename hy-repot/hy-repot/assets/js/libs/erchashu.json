@@ -1,0 +1,42 @@
+[
+  {
+    "name": "legion_name",
+    "text": "军团",
+    "defaultValue": "%",
+    "defaultText": "全选",
+    "dataType": "string",
+    "width": "100",
+    "required": false,
+    "formElement": "selectMul",
+    "dataSource": "sql",
+    "content": "select distinct legion_name as name,legion_name as text from report_work_details",
+    "autoComplete": false
+
+  },
+  {
+    "name": "department_name",
+    "text": "销售部",
+    "defaultValue": "%",
+    "defaultText": "全选",
+    "dataType": "string",
+    "width": "100",
+    "required": false,
+    "formElement": "selectMul",
+    "dataSource": "sql",
+    "content": "select distinct(department_name) as name,department_name as text from report_work_details",
+    "autoComplete": false
+  },
+  {
+    "name": "group_name",
+    "text": "小组",
+    "defaultValue": "%",
+    "defaultText": "全选",
+    "dataType": "string",
+    "width": "100",
+    "required": false,
+    "formElement": "selectMul",
+    "dataSource": "sql",
+    "content": "select distinct(group_name) as name,group_name as text from report_work_details",
+    "autoComplete": false
+  }
+]

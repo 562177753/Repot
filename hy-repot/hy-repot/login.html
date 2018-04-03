@@ -1,0 +1,83 @@
+<!DOCTYPE html>
+<html>
+<head>
+    <title>尚佳系统登录界面</title>
+    <meta http-equiv="Content-Type" content="text/html; charset=utf-8"/>
+    <meta name="viewport" content="width=device-width, initial-scale=1">
+    <link href="bootstrap/css/bootstrap.min.css" rel="stylesheet" type="text/css"
+    />
+    <link href="assets/css/style.css" rel='stylesheet' type='text/css'/>
+    <script type="text/javascript" src="assets/js/libs/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+    </script>
+
+</head>
+<body>
+<div class="bak">
+    <div class="bak_main">
+        <img src="assets/img/login/login_logo.png" style="width:8.5%;margin-top: 3%;margin-left: 3%;min-width: 100px">
+        <div class="main">
+            <div class="login">
+                <img src="assets/img/login/login_title.png" style="width: 100%;margin-left: -5px">
+                <div class="inset">
+                    <h2 style="text-align:left "><img src="assets/img/login/login_text.png"></h2>
+                    <!--<form>-->
+                        <div>
+                            <span><label class="label_input">请输入账号</label></span>
+                            <span><input type="text" id="username" class="textbox"></span>
+                        </div>
+                        <div>
+                            <span><label class="label_input">密码</label></span>
+                            <span><input type="password" id="pwd" class="password textbox"  ></span>
+                        </div>
+                        <div class="sign">
+                            <button id="login" class="submit"/>登录</button>
+                        </div>
+                   <!-- </form>-->
+                </div>
+            </div>
+
+        </div>
+       <!-- <div class="load">
+            <div id="center">
+                <div class="skype-loader">
+                    <div class="dot">
+                        <div class="first"></div>
+                    </div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>-->
+    </div>
+
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="margin-top: 150px">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>-->
+                <h2 class="modal-title">提示</h2>
+            </div>
+            <div class="modal-body">
+                <span id="myModalLabel"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">确定</button>
+            </div>
+        </div>
+    </div>
+</div>
+
+
+<script src="./assets/js/libs/jquery-1.10.2.min.js"></script>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script type="text/javascript" src="./assets/js/service/ajax.js"></script>
+<script type="text/javascript" src="./assets/js/service/common.js"></script>
+<script type="text/javascript" src="./assets/js/service/md5.js"></script>
+<script type="text/javascript" src="./assets/js/service/loginclick.js"></script>
+</body>
+</html>

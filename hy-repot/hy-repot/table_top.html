@@ -1,0 +1,572 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>尚佳报表系统</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"
+    />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery.ui.1.10.2.ie.css"
+    />
+    <![endif]-->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link href="assets/css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <link href="plugins/bootstrap-table-develop/dist/bootstrap-table.css" rel="stylesheet"/>
+    <link href="plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.css" rel="stylesheet"/>
+    <link href="plugins/bootstrap-table-develop/dist/bootstrap-table-fixed-columns.css" rel="stylesheet"/>
+    <!--  <link rel="stylesheet" type="text/css" href="plugins/fenye/jqpagination.css"
+      />-->
+    <script type="text/javascript" src="assets/js/libs/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js">
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/lodash.compat.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/libs/html5shiv.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="plugins/touchpunch/jquery.ui.touch-punch.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.move.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.swipe.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/breakpoints.js">
+    </script>
+    <script type="text/javascript" src="plugins/respond/respond.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/cookie/jquery.cookie.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.horizontal.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="plugins/flot/excanvas.min.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/app.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.form-components.js">
+    </script>
+    <script type="text/javascript" src="plugins/fenye/jquery.jqpagination.js">
+    </script>
+
+    <script>
+        $(document).ready(function () {
+            App.init();
+            Plugins.init();
+            FormComponents.init()
+        });
+    </script>
+    <style>
+        .data {
+            display: block;
+        }
+
+        table {
+            table-layout: fixed;
+        }
+    </style>
+</head>
+
+<body>
+<header class="header navbar navbar-fixed-top" role="banner">
+    <!--<div class="container">-->
+    <ul class="nav navbar-nav">
+        <li class="nav-toggle">
+            <a href="javascript:void(0);" title="">
+                <i class="icon-reorder">
+                </i>
+            </a>
+        </li>
+    </ul>
+    <a class="navbar-brand">
+        <img src="assets/img/index/home_logo.png" alt="logo" style="height: 40px;margin-top: 3px;margin-left: 20px"/>
+    </a>
+    <a href="#" class="toggle-sidebar bs-tooltip" data-placement="bottom">
+        <img src="assets/img/index/home_nav.png" style="height: 30px;margin-top: 10px">
+    </a>
+    <div class="nav-rights" style="margin-right: 20px">
+        <div class="nav-rights">
+            <a href="login.html">
+                <div></div>
+            </a>
+        </div>
+        <div class="nav-rights">
+            <span id="username"></span>
+        </div>
+
+        <!--</div>-->
+
+    </div>
+</header>
+<div id="container">
+    <div id="sidebar" class="sidebar-fixed">
+        <div id="sidebar-content">
+            <ul id="nav">
+                <li id="index" class="current delettop delectbac displaynone">
+                    <a href="index.html">
+                        • &nbsp;首页
+                    </a>
+                </li>
+                <li id="down_1" class="li-down displaynone current" style="margin-top: 0px!important;">
+                    <a href="table_top.html">
+                        五维总览
+                    </a>
+                </li>
+                <li id="down_9" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        考勤报表
+                    </a>
+                </li>
+                <li id="down_2" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        推广报表
+                    </a>
+                </li>
+                <li id="down_3" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        销售报表
+                    </a>
+                </li>
+                <li id="down_4" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        在线报表
+                    </a>
+                </li>
+                <li id="down_5" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        中端报表
+                    </a>
+                </li>
+                <li id="down_6" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        后端报表
+                    </a>
+                </li>
+                <li id="down_10" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        财务报表
+                    </a>
+                </li>
+                <li id="down_11" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表A
+                    </a>
+                </li>
+                <li id="down_12" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表B
+                    </a>
+                </li>
+                <li id="down_8" class="li-down displaynone">
+                    <a href="chart_leveone.html">
+                        业务图
+
+                    </a>
+                </li>
+                <li id="down_7" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        个人中心
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="insert_user.html">
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="role_user.html">
+                                角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="date_manage.html">
+                                数据源管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="report_manage.html">
+                                报表管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content" class="container-back">
+        <div class="container">
+            <div class="row" style="margin-top: 10px!important;">
+
+                <div class="col-md-12" style="margin-top: 10px!important;">
+                    <div class="widget box" id="down" style=" border-radius: 5px!important;clear: both">
+                        <div class="widget-content" style="border-radius: 10px!important;">
+                            <div class="col-md-11" style="padding-right: 0px!important;margin-left: -40px">
+                                <div class="">
+                                    <div class="col-md-12 " style="">
+                                        <div class="select_title">时间:</div>
+                                        <div id="date_div" style="margin-left: 0px;">
+                                            <button id="month_button"
+                                                    style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                月
+                                            </button>
+                                            <button id="week_button"
+                                                    style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                周
+                                            </button>
+                                            <button id="day_button"
+                                                    style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                日
+                                            </button>
+                                        </div>
+                                        <div class='time-content data'>
+                                            <div class="form-group">
+                                                <div class='input-group date' id='datetimepicker1'>
+                                                    <input id="startTime" type='text' class="form-control inputde"
+                                                           placeholder="开始日期"/>
+                                                        <span class="input-group-addon" style="">
+                                                            <div class="icon-triangle"></div>
+                                                        </span>
+                                                </div>
+                                            </div>
+                                        </div>
+                                        <div class='time-content data'>
+                                            <div class="form-group">
+                                                <div class='input-group date' id='datetimepicker2'>
+                                                    <input id="endTime" type='text' class="form-control inputde"
+                                                           placeholder="结束时间"/>
+                                                <span class="input-group-addon" style="">
+                                                    <div class="icon-triangle"></div>
+                                                </span>
+                                                </div>
+                                            </div>
+                                        </div>
+
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-12" id="type" style="margin-top: 10px">
+                                        <div class="select_title">维度:</div>
+                                        <button id="hujiaojuntuan" style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">呼叫军团</button>
+                                        <button style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">流量军团</button>
+                                        <button style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">分校</button>
+                                        <button style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">地区</button>
+                                        <button style="float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">SKU</button>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div class="col-md-12" id="genre"
+                                         style="height: auto;overflow-y: hidden;padding-right: 0px">
+                                        <div class="select_title " style="margin-top: 10px">数据:</div>
+                                        <div class="col-md-11" style="margin-left: -15px;padding-right: 0px">
+                                            <button id="spend"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                推广费
+                                            </button>
+                                            <button id="spend1"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                现金
+                                            </button>
+                                            <button id="count_num"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                名片
+                                            </button>
+                                            <button id="count_chance"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                机会
+                                            </button>
+                                            <button id="cpi"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                名片成本
+                                            </button>
+                                            <button id="cpa"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                CPA
+                                            </button>
+                                            <button id="count_regist"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                报名人数
+                                            </button>
+                                            <button id="count_educate_amount"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                流水
+                                            </button>
+                                            <button id="roi"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                ROI
+                                            </button>
+                                            <button id="rate_num"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                名片销转
+                                            </button>
+                                            <button id="rate_chance"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                机会销转
+                                            </button>
+                                            <button id="arpu"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                ARPU
+                                            </button>
+                                            <button id="count_seat"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                坐席
+                                            </button>
+                                            <button id="count_return"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                回访
+                                            </button>
+                                            <button id="count_call"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                拨打数
+                                            </button>
+                                            <button id="count_calltime"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                通时
+                                            </button>
+                                            <button id="per_num"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                人均名片
+                                            </button>
+                                            <button id="per_call"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                人均拨打
+                                            </button>
+                                            <button id="per_calltime"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                人均通时
+                                            </button>
+                                            <button id="per_amount"
+                                                    style="margin-top: 10px;float:left;display: inline-block;color:#0C2D5C;background: #F5F6FA;padding:3px 20px;border-radius: 5px;font-size: 15px;border: 1px solid #666666;margin-left: 15px">
+                                                人均单产
+                                            </button>
+                                        </div>
+                                    </div>
+                                    <div class="clearfix"></div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">呼叫军团:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="legion_name" style="display: none">%</p>
+                                                    <input id="legion_name_input" type='text' disabled
+                                                           class="form-control inputde disable" value="全选"/>
+                                                         <span class="input-group-addon down-ul disable" disabled
+                                                               style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="legion_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a
+                                                            href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">流量军团:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="liuliang_name" style="display: none">%</p>
+                                                    <input id="liuliang_name_input" type='text' disabled
+                                                           class="form-control inputde disable" value="全选"/>
+                                                         <span class="input-group-addon down-ul disable" disabled
+                                                               style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="liuliang_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a
+                                                            href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">地&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;区:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="diqu_name" style="display: none">%</p>
+                                                    <input id="diqu_name_input" type='text' disabled
+                                                           class="form-control inputde disable" value="全选"/>
+                                                         <span class="input-group-addon down-ul disable" disabled
+                                                               style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="diqu_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a
+                                                            href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">分&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;校:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="fenxiao_name" style="display: none">%</p>
+                                                    <input id="fenxiao_name_input" type='text' disabled
+                                                           class="form-control inputde disable" value="全选"/>
+                                                         <span class="input-group-addon down-ul disable" disabled
+                                                               style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="fenxiao_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a
+                                                            href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                    <div style="margin-top: 10px;float: left">
+                                        <div class="select_title" style="margin-left: 15px">S&nbsp;&nbsp;&nbsp;K&nbsp;&nbsp;&nbsp;U:</div>
+                                        <div class='time-content'>
+                                            <div class="form-group">
+                                                <div class='input-group date'>
+                                                    <p id="sku_name" style="display: none">%</p>
+                                                    <input id="sku_name_input" type='text' disabled
+                                                           class="form-control inputde disable" value="全选"/>
+                                                         <span class="input-group-addon down-ul disable" disabled
+                                                               style="">
+                                                             <div class="icon-triangle"></div>
+                                                         </span>
+                                                </div>
+                                                <ul class="select_ul" id="sku_name_ul"
+                                                    style="z-index: 10000;position: relative">
+                                                    <li><span style="display: none">%</span><a
+                                                            href="javascript:;">全选</a></li>
+                                                </ul>
+                                            </div>
+
+                                        </div>
+                                    </div>
+                                </div>
+                                <div class="clearfix"></div>
+                            </div>
+                            <div class="col-md-1" style="padding: 0px">
+                                <button id="cereat_table" type="button" class="btn  right-button blue">生成表格</button>
+                                <div class="clearfix"></div>
+                                <button id="resert_table" type="button" class="btn  right-button gray">重置表格</button>
+                                <br>
+                                <div class="clearfix"></div>
+                                <button id="load_table" type="button" class="btn  right-button gray">下载表格</button>
+                            </div>
+                            <div class="clearfix"></div>
+                        </div>
+                    </div>
+
+                </div>
+            </div>
+            <div class="clearfix"></div>
+        </div>
+
+        <div class="col-md-12">
+
+            <div class="table-title">
+                <div class="widget-header" style="float: right">
+                    <div class="toolbar no-padding" id="loaddown">
+                        <div class="btn-group" style="background: transparent;border: none">
+                                <span class="btn btn-xs widget-collapse"
+                                      style="background: transparent;border: none;outline: none">
+                                    <i class="icon-angle-down" style="font-size: 20px">
+                                    </i>
+                                </span>
+                        </div>
+                    </div>
+                </div>
+            </div>
+            <table id="tb_user"></table>
+            <div class="floort">
+                <div style="float: right;margin-right: 10px;font-size: 8px;margin-bottom: 5px;color: #0C2D5C"
+                     id="update_time"></div>
+                <div class="clearfix"></div>
+                <div class="gigantic pagination">
+                    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+                    <input type="text" readonly="readonly"/>
+                    <a href="#" class="next" data-action="next">&rsaquo;</a>
+                </div>
+
+            </div>
+        </div>
+
+    </div>
+
+
+</div>
+<div class="clearfix"></div>
+</div>
+<div class="load">
+    <div id="center">
+        <div class="skype-loader">
+            <div class="dot">
+                <div class="first"></div>
+            </div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+            <div class="dot"></div>
+        </div>
+    </div>
+</div>
+</div>
+<div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+    <div class="modal-dialog" role="document">
+        <div class="modal-content" style="margin-top: 150px">
+            <div class="modal-header">
+                <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                        aria-hidden="true">×</span></button>-->
+                <h5 class="modal-title">提示</h5>
+            </div>
+            <div class="modal-body">
+                <span id="myModalLabel" style="font-size: 20px;"></span>
+            </div>
+            <div class="modal-footer">
+                <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+            </div>
+        </div>
+    </div>
+</div>
+<script src="./bootstrap/js/bootstrap.min.js"></script>
+<script src="./plugins/bootstrap-table-develop/dist/bootstrap-table.min.js"></script>
+<script src="./plugins/bootstrap-table-develop/dist/bootstrap-table-fixed-columns.js"></script>
+<script src="./plugins/bootstrap-datetimepicker/moment-with-locales.min.js"></script>
+<script src="./plugins/bootstrap-datetimepicker/bootstrap-datetimepicker.min.js"></script>
+<!--<script src="./plugins/bootstrap-datetimepicker/init.js"></script>-->
+<script type="text/javascript" src="./assets/js/service/ajax.js"></script>
+<script type="text/javascript" src="./assets/js/service/common.js"></script>
+<script type="text/javascript" src="./assets/js/service/table_top.js"></script>
+<script type="text/javascript">
+
+</script>
+</body>
+
+</html>

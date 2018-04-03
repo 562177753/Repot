@@ -1,0 +1,384 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>尚佳报表系统主页</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"
+    />
+    <link href="plugins/bootstarp-select/bootstrap-select.min.css" rel="stylesheet" type="text/css"
+    />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery.ui.1.10.2.ie.css"
+    />
+    <![endif]-->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link href="assets/css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/libs/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js">
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/bootstarp-select/bootstrap-select.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/lodash.compat.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/libs/html5shiv.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="plugins/touchpunch/jquery.ui.touch-punch.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.move.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.swipe.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/breakpoints.js">
+    </script>
+    <script type="text/javascript" src="plugins/respond/respond.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/cookie/jquery.cookie.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.horizontal.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="plugins/flot/excanvas.min.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/app.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.form-components.js">
+    </script>
+    <script type="text/javascript" src="plugins/fenye/jquery.jqpagination.js">
+    </script>
+    <!--在线sql-->
+    <link rel="stylesheet" href="plugins/codemirror/theme/ambiance.css">
+    <link type="text/css" rel="stylesheet" href="plugins/codemirror/lib/codemirror.css"/>
+    <link type="text/css" rel="stylesheet" href="plugins/codemirror/addon/hint/show-hint.css"/>
+    <script type="text/javascript" src="plugins/codemirror/lib/codemirror.js"></script>
+    <script type="text/javascript" src="plugins/codemirror/mode/sql/sql.js"></script>
+    <script type="text/javascript" src="plugins/codemirror/addon/hint/show-hint.js"></script>
+    <script type="text/javascript" src="plugins/codemirror/addon/hint/sql-hint.js"></script>
+    <script>
+        $(document).ready(function () {
+            App.init();
+            Plugins.init();
+            FormComponents.init()
+        });
+    </script>
+
+</head>
+
+<body>
+<header class="header navbar navbar-fixed-top" role="banner">
+    <!--<div class="container">-->
+    <ul class="nav navbar-nav">
+        <li class="nav-toggle">
+            <a href="javascript:void(0);" title="">
+                <i class="icon-reorder">
+                </i>
+            </a>
+        </li>
+    </ul>
+    <a class="navbar-brand">
+        <img src="assets/img/index/home_logo.png" alt="logo" style="height: 40px;margin-top: 3px;margin-left: 20px"/>
+    </a>
+    <a href="#" class="toggle-sidebar bs-tooltip" data-placement="bottom">
+        <img src="assets/img/index/home_nav.png" style="height: 30px;margin-top: 10px">
+    </a>
+    <div class="nav-rights" style="margin-right: 20px">
+        <div class="nav-rights">
+            <a href="login.html">
+                <div></div>
+            </a>
+        </div>
+        <div class="nav-rights">
+            <span id="username"></span>
+        </div>
+
+        <!--</div>-->
+
+    </div>
+</header>
+<div id="container">
+    <div id="sidebar" class="sidebar-fixed">
+        <div id="sidebar-content">
+            <ul id="nav">
+                <li id="index" class="current delettop delectbac displaynone">
+                    <a href="index.html">
+                        • &nbsp;首页
+                    </a>
+                </li>
+                <li id="down_9" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        考勤报表
+                    </a>
+                </li>
+                <li id="down_1" class="li-down displaynone" style="margin-top: 0px!important;">
+                    <a href="table_top.html">
+                        五维总览
+                    </a>
+                </li>
+                <li id="down_2" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        推广报表
+                    </a>
+                </li>
+                <li id="down_3" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        销售报表
+                    </a>
+                </li>
+                <li id="down_4" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        在线报表
+                    </a>
+                </li>
+                <li id="down_5" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        中端报表
+                    </a>
+                </li>
+                <li id="down_6" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        后端报表
+                    </a>
+                </li>
+                <li id="down_10" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        财务报表
+                    </a>
+                </li>
+                <li id="down_11" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表A
+                    </a>
+                </li>
+                <li id="down_12" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表B
+                    </a>
+                </li>
+                <li id="down_8" class="li-down displaynone">
+                    <a href="chart_leveone.html">
+                        业务图
+
+                    </a>
+                </li>
+                <li id="down_7" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        个人中心
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="insert_user.html">
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="role_user.html">
+                                角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="date_manage.html">
+                                数据源管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="report_manage.html">
+                                报表管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <div style="margin-top: 30px;width: 100%;padding-top: 30px;padding-bottom: 30px;background: #ffffff;border-radius: 5px;padding-right: 10px;padding-left: 10px">
+                <ul class="nav nav-tabs">
+                    <li class="active"><a href="#">基本设置</a></li>
+                    <li><a href="#">查询参数设置</a></li>
+                </ul>
+                <div style="margin-top: 10px">
+                    <div style="margin-top: 10px;width: 210px;float: left">
+                        <div class="select_title" style="margin-left: 15px">名&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;称:</div>
+                        <div class='time-content'>
+                            <div class="form-group">
+                                <div class='input-group date'>
+                                    <input id="" type='text'
+                                           class="form-control" style="border-radius: 5px;height: 30px;outline: none"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div style="margin-top: 10px;width: 210px;float: left">
+                        <div class="select_title" style="margin-left: 15px">数&nbsp;&nbsp;&nbsp;&nbsp;据源:</div>
+                        <div class='time-content'>
+                            <div class="form-group">
+                                <select id="datasource" class="form-control" style="width: 100%;height: 30px;border-radius: 5px">
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;width: 210px;float: left">
+                        <div class="select_title" style="margin-left: 15px">类&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;&nbsp;型:</div>
+                        <div class='time-content'>
+                            <div class="form-group">
+                                <select class="form-control" style="width: 100%;height: 30px;border-radius: 5px">
+                                    <option value="1">五维总览</option>
+                                    <option value="2">推广报表</option>
+                                    <option value="3">销售报表</option>
+                                    <option value="4">在线报表</option>
+                                    <option value="5">中端报表</option>
+                                    <option value="6">后端报表</option>
+                                </select>
+                            </div>
+
+                        </div>
+                    </div>
+                    <div style="margin-top: 10px;width: 210px;float: left">
+                        <div class="select_title" style="margin-left: 15px">表格类型</div>
+                        <div class='time-content'>
+                            <div class="form-group">
+                                <div class='input-group date'>
+                                    <input id="" type='text'
+                                           class="form-control" style="border-radius: 5px;height: 30px;outline: none"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                    <div style="margin-top: 10px;width: 210px;float: left">
+                        <div class="select_title" style="margin-left: 15px">合并后名称</div>
+                        <div class='time-content'>
+                            <div class="form-group">
+                                <div class='input-group date'>
+                                    <input id="" type='text'
+                                           class="form-control" style="border-radius: 5px;height: 30px;outline: none"/>
+                                </div>
+                            </div>
+
+                        </div>
+
+                    </div>
+                </div>
+                <div class="clearfix"></div>
+                <div style="margin-top: 20px;padding-right: 20px">
+                    <div style="width: 10%;float: left;text-align: left;padding-left: 16px;color:  rgba(12,45,92,0.7);font-size: 14px">
+                        <span>时间查询sql语句:</span>
+                    </div>
+                    <div style="width: 90%;float: left">
+                        <textarea id="time" name="code" style="font-size: 19px!important;"></textarea>
+                        <button id="timesql" class="btn btn-success" style="float: right;border-radius: 5px;margin-top: 10px">
+                            执行sql语句
+                        </button>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+                <div style="margin-top: 20px;padding-right: 20px">
+                    <div style="width: 10%;float: left;text-align: left;padding-left: 16px;color:  rgba(12,45,92,0.7);font-size: 14px">
+                        <span>查询sql语句:</span>
+                    </div>
+                    <div style="width: 90%;float: left">
+                        <textarea id="code" name="code" style="font-size: 19px!important;"></textarea>
+
+                        <button id="runsql" class="btn btn-success" style="float: right;border-radius: 5px;margin-top: 10px">
+                            执行sql语句
+                        </button>
+                    </div>
+
+                </div>
+                <div class="clearfix"></div>
+                <div style="padding-left: 16px;padding-right: 16px">
+                    <table class="table table-bordered" style="margin-top: 20px">
+                        <tr>
+                            <td style="color: #0a001f;font-weight: 600">列名</td>
+                            <td style="color: #0a001f;font-weight: 600">标题</td>
+                            <td style="color: #0a001f;font-weight: 600">类型</td>
+                            <td style="color: #0a001f;font-weight: 600">数据类型</td>
+                            <td style="color: #0a001f;font-weight: 600">宽度</td>
+                            <td style="color: #0a001f;font-weight: 600">精度</td>
+                            <td style="color: #0a001f;font-weight: 600">是否百分比</td>
+                            <td style="color: #0a001f;font-weight: 600">列备注</td>
+                        </tr>
+                        <tbody id="body_table">
+
+                      <!--  <tr>
+                            <td><input></td>
+                            <td><input></td>
+                            <td><select style="width: 83%;height:25px;"><option value="1">布局列</option><option value="3">计算列</option></select></td>
+                            <td>int</td>
+                            <td><input></td>
+                            <td><input></td>
+                            <td><select style="width: 83%;height:25px;"><option value="0">否</option><option value="1">是</option></select></td>
+                            <td><input></td>
+                        </tr>-->
+
+                        </tbody>
+                    </table>
+
+                </div>
+
+
+                <div class="clearfix"></div>
+                <button class="btn btn-danger" style="float: right;border-radius: 5px;margin-top: 10px;margin-right: 20px">
+                    &nbsp;&nbsp;关闭&nbsp;&nbsp;
+                </button>
+                <button class="btn btn-success" style="float: right;border-radius: 5px;margin-top: 10px;margin-right: 20px">
+                    &nbsp;&nbsp;保存&nbsp;&nbsp;
+                </button>
+                <div class="clearfix"></div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 150px">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>-->
+                    <h5 class="modal-title">提示</h5>
+                </div>
+                <div class="modal-body">
+                    <span id="myModalLabel" style="font-size: 20px;"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+<script>
+
+</script>
+</body>
+<script type="text/javascript" src="./assets/js/service/ajax.js"></script>
+<script type="text/javascript" src="./assets/js/service/common.js"></script>
+<script type="text/javascript" src="./assets/js/service/add_report.js"></script>
+</html>

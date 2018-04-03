@@ -1,0 +1,454 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>尚佳报表系统主页</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"
+    />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery.ui.1.10.2.ie.css"
+    />
+    <![endif]-->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome-ie7.min.css">
+    <![endif]-->
+    <!--[if IE 8]>
+    <link href="assets/css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/libs/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js">
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/lodash.compat.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/libs/html5shiv.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="plugins/touchpunch/jquery.ui.touch-punch.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.move.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.swipe.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/breakpoints.js">
+    </script>
+    <script type="text/javascript" src="plugins/respond/respond.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/cookie/jquery.cookie.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.horizontal.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="plugins/flot/excanvas.min.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/app.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.form-components.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            App.init();
+            Plugins.init();
+            FormComponents.init()
+        });
+    </script>
+    <script type="text/javascript" src="plugins/fenye/jquery.jqpagination.js">
+    </script>
+</head>
+
+<body>
+<header class="header navbar navbar-fixed-top" role="banner">
+    <!--<div class="container">-->
+        <ul class="nav navbar-nav">
+            <li class="nav-toggle">
+                <a href="javascript:void(0);" title="">
+                    <i class="icon-reorder">
+                    </i>
+                </a>
+            </li>
+        </ul>
+        <a class="navbar-brand">
+            <img src="assets/img/index/home_logo.png" alt="logo" style="height: 40px;margin-top: 3px;margin-left: 20px"/>
+        </a>
+        <a href="#" class="toggle-sidebar bs-tooltip" data-placement="bottom">
+            <img src="assets/img/index/home_nav.png" style="height: 30px;margin-top: 10px">
+        </a>
+        <div class="nav-rights" style="margin-right: 20px">
+            <div class="nav-rights">
+                <a href="login.html">
+                    <div></div>
+                </a>
+            </div>
+            <div class="nav-rights">
+                <span id="username"></span>
+            </div>
+
+        <!--</div>-->
+
+    </div>
+</header>
+<div id="container" style="width: 100%!important;">
+    <div id="sidebar" class="sidebar-fixed">
+        <div id="sidebar-content">
+            <ul id="nav">
+                <li  id="index" class="current delettop delectbac displaynone">
+                    <a href="index.html">
+                        • &nbsp;首页
+                    </a>
+                </li>
+                <li id="down_1" class="li-down displaynone" style="margin-top: 0px!important;">
+                    <a href="table_top.html">
+                        五维总览
+                    </a>
+                </li>
+                <li id="down_9" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        考勤报表
+                    </a>
+                </li>
+                <li id="down_2" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        推广报表
+                    </a>
+                </li>
+                <li id="down_3" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        销售报表
+                    </a>
+                </li>
+                <li id="down_4" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        在线报表
+                    </a>
+                </li>
+                <li id="down_5" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        中端报表
+                    </a>
+                </li>
+                <li id="down_6" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        后端报表
+                    </a>
+                </li>
+                <li id="down_10" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        财务报表
+                    </a>
+                </li>
+                <li id="down_11" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表A
+                    </a>
+                </li>
+                <li id="down_12" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表B
+                    </a>
+                </li>
+                <li  id="down_8"  class="li-down displaynone">
+                    <a href="chart_leveone.html">
+                        业务图
+
+                    </a>
+                </li>
+                <li id="down_7" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        个人中心
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="insert_user.html">
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="role_user.html">
+                                角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="date_manage.html">
+                                数据源管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="report_manage.html">
+                                报表管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <div style="margin-top: 30px;width: 100%;padding-top: 30px;padding-bottom: 30px;background: #ffffff;border-radius: 5px">
+                <div class="input-group" style="width: 300px;margin-left: 30px">
+                    <input id="search_input" type="text" class="form-control"
+                           style="border-bottom-left-radius: 3px;border-top-left-radius: 5px;background: #F5F6FA"
+                           placeholder="名称">
+            <span class="input-group-btn">
+               <button id="search" class="btn btn-info"
+                       style="background: #5B6FC2;border:none;border-bottom-right-radius: 5px;border-top-right-radius: 5px">
+                   <img src="assets/img/user/search.png" style="width: 20px"></button>
+               <button class="btn btn-info" id="addrole"
+                       style="background: #5B6FC2;border:none;border-radius: 5px;margin-left: 20px">新增角色
+               </button>
+            </span>
+                </div>
+            </div>
+            <table class="usertable datatable"
+                   style="margin-top: 30px">
+                <thead>
+                <tr>
+                    <th>ID</th>
+                    <th>名称</th>
+                    <th>名称英语名</th>
+                    <th>说明</th>
+                    <th>创建用户</th>
+                    <th>创建时间</th>
+                    <th>修改时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="body_table">
+
+                </tbody>
+            </table>
+            <div class="floort" style="height: 40px">
+                <div class="gigantic pagination" style="margin-top: 3px">
+                    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+                    <input type="text" readonly="readonly" />
+                    <a href="#" class="next" data-action="next">&rsaquo;</a>
+                </div>
+            </div>
+            <!--<button id="addrole" class="btn  btn-success">添加新角色</button>-->
+        </div>
+        <div class="load">
+            <div id="center">
+                <div class="skype-loader">
+                    <div class="dot">
+                        <div class="first"></div>
+                    </div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="addRoles-dialog" tabindex="-1" role="dialog" data-backdrop='static'
+         aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 150px;border-radius: 10px;">
+                <div class="modal-header_adduser" style="margin-top: 10px;margin-left: 25px">
+                    <h5>新增角色</h5>
+                </div>
+                <div class="modal-body_adduser" style="padding-top: 0px">
+                    <div class="form-group">
+                        <span class=" control-label">id(id不能重复)</span>
+                        <input type="text" name="txt_departmentname" class="form-control" id="id" placeholder="id">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <span class=" control-label">名称(名称不能重复)</span>
+                        <input type="text" name="txt_parentdepartment" class="form-control" id="name" placeholder="名称">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <span class=" control-label">名称英语名(名称英语名不能重复)</span>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="englishname"
+                               placeholder="名称英语名">
+                    </div>
+                    <div class="clearfix"></div>
+                    <div class="form-group">
+                        <span class="control-label">备注</span>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="comment"
+                               placeholder="备注">
+                    </div>
+                    <div class="clearfix"></div>
+                </div>
+                <div class="modal-footer-adduser">
+                    <button type="button" class="btn btn-primary" id="btn_submit">保存</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="choose_dialog" tabindex="-1" role="dialog" data-backdrop='static'
+         aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top:40px;border-radius: 10px;">
+                <div class="modal-header_adduser" style="margin-top: 10px;margin-left: 25px">
+                    <h5>选择权限</h5>
+                </div>
+                <div class="modal-body_adduser" style="padding-top: 0px">
+                    <table class=" table datatable">
+                        <thead>
+                        <tr style="background: #ECECEC;">
+                            <th>id</th>
+                            <th>表名称</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="body_delecr">
+
+                        </tbody>
+                        <tbody id="body_insert">
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer-adduser">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 150px">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>-->
+                    <h5 class="modal-title">提示</h5>
+                </div>
+                <div class="modal-body">
+                    <span id="myModalLabel" style="font-size: 20px;"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="delectRole-dialog" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 150px">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>-->
+                    <h5 class="modal-title">提示</h5>
+                </div>
+                <div class="modal-body">
+                    <span style="font-size: 20px;">删除后不可恢复,您确定删除吗</span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" id="delect_role">确定</button>
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+ <!--   <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 150px">
+                <div class="modal-header" style="border: none">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                    <h4 class="modal-title" id="myModalLabel">您输入的密码错误</h4>
+                </div>
+            </div>
+        </div>
+    </div>
+    <div class="modal fade" id="myModalto" tabindex="-1" role="dialog" data-backdrop='static'
+         aria-labelledby="myModalLabel">
+        <div class="modal-dialog" id="dialogf" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">新增角色</h4>
+                </div>
+                <div class="modal-body">
+
+                    <div class="form-group">
+                        <label for="id">id(id不能重复)</label>
+                        <input type="text" name="txt_departmentname" class="form-control" id="id" placeholder="id">
+                    </div>
+                    <div class="form-group">
+                        <label for="name">名称(名称不能重复)</label>
+                        <input type="text" name="txt_parentdepartment" class="form-control" id="name" placeholder="名称">
+                    </div>
+                    <div class="form-group">
+                        <label for="englishname">名称英语名(名称英语名不能重复)</label>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="englishname"
+                               placeholder="名称英语名">
+                    </div>
+                    <div class="form-group">
+                        <label for="comment">备注</label>
+                        <input type="text" name="txt_departmentlevel" class="form-control" id="comment"
+                               placeholder="备注">
+                    </div>
+                    <div class="form-group">
+                        <label for="txt_statu">启用状态</label>
+                        <select type="text" name="txt_statu" class="form-control" id="txt_statu">
+                            <option value="1">是</option>
+                            <option value="0">否</option>
+                        </select>
+                    </div>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                    <button type="button" id="btn_submit" class="btn btn-primary">保存</button>
+                </div>
+            </div>
+        </div>
+        <div class="modal-dialog" id="dialogt" role="document">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>
+                    <h4 class="modal-title">新增角色</h4>
+                </div>
+                <div class="modal-body">
+                    <table class="table table-striped table-bordered table-hover table-checkable datatable">
+                        <thead>
+                        <tr style="background: #ECECEC;">
+                            <th>id</th>
+                            <th>表名称</th>
+                            <th>操作</th>
+                        </tr>
+                        </thead>
+                        <tbody id="body_delecr">
+
+                        </tbody>
+                        <tbody id="body_insert">
+
+                        </tbody>
+                    </table>
+
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-default" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>-->
+</div>
+
+</body>
+<script type="text/javascript" src="./assets/js/service/ajax.js"></script>
+<script type="text/javascript" src="./assets/js/service/common.js"></script>
+<script type="text/javascript" src="./assets/js/service/role_user.js"></script>
+</html>

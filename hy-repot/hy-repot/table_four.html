@@ -1,0 +1,285 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="utf-8">
+    <meta name="viewport"
+          content="width=device-width, initial-scale=1.0, minimum-scale=1.0, maximum-scale=1.0, user-scalable=0"
+    />
+    <title>尚佳报表系统主页</title>
+    <link href="bootstrap/css/bootstrap.css" rel="stylesheet" type="text/css"
+    />
+    <link rel="stylesheet" href="assets/css/sweetalert.css">
+    <link href="plugins/bootstarp-select/bootstrap-select.min.css" rel="stylesheet" type="text/css"
+    />
+    <!--[if lt IE 9]>
+    <link rel="stylesheet" type="text/css" href="plugins/jquery-ui/jquery.ui.1.10.2.ie.css"
+    />
+    <![endif]-->
+    <link href="assets/css/main.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/plugins.css" rel="stylesheet" type="text/css"/>
+    <link href="assets/css/responsive.css" rel="stylesheet" type="text/css"
+    />
+    <link href="assets/css/icons.css" rel="stylesheet" type="text/css"/>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome.min.css">
+    <!--[if IE 7]>
+    <link rel="stylesheet" href="assets/css/fontawesome/font-awesome-ie7.min.css">
+
+    <![endif]-->
+    <!--[if IE 8]>
+    <link href="assets/css/ie8.css" rel="stylesheet" type="text/css"/>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/libs/jquery-1.10.2.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/jquery-ui/jquery-ui-1.10.2.custom.min.js">
+    </script>
+    <script type="text/javascript" src="bootstrap/js/bootstrap.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/bootstarp-select/bootstrap-select.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/lodash.compat.min.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/sweetalert.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script src="assets/js/libs/html5shiv.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="plugins/touchpunch/jquery.ui.touch-punch.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.move.js">
+    </script>
+    <script type="text/javascript" src="plugins/event.swipe/jquery.event.swipe.js">
+    </script>
+    <script type="text/javascript" src="assets/js/libs/breakpoints.js">
+    </script>
+    <script type="text/javascript" src="plugins/respond/respond.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/cookie/jquery.cookie.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.min.js">
+    </script>
+    <script type="text/javascript" src="plugins/slimscroll/jquery.slimscroll.horizontal.min.js">
+    </script>
+    <!--[if lt IE 9]>
+    <script type="text/javascript" src="plugins/flot/excanvas.min.js">
+    </script>
+    <![endif]-->
+    <script type="text/javascript" src="assets/js/app.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.js">
+    </script>
+    <script type="text/javascript" src="assets/js/plugins.form-components.js">
+    </script>
+    <script type="text/javascript" src="plugins/fenye/jquery.jqpagination.js">
+    </script>
+    <script>
+        $(document).ready(function () {
+            App.init();
+            Plugins.init();
+            FormComponents.init()
+        });
+    </script>
+
+</head>
+
+<body>
+<header class="header navbar navbar-fixed-top" role="banner">
+    <!--<div class="container">-->
+    <ul class="nav navbar-nav">
+        <li class="nav-toggle">
+            <a href="javascript:void(0);" title="">
+                <i class="icon-reorder">
+                </i>
+            </a>
+        </li>
+    </ul>
+    <a class="navbar-brand">
+        <img src="assets/img/index/home_logo.png" alt="logo" style="height: 40px;margin-top: 3px;margin-left: 20px"/>
+    </a>
+    <a href="#" class="toggle-sidebar bs-tooltip" data-placement="bottom">
+        <img src="assets/img/index/home_nav.png" style="height: 30px;margin-top: 10px">
+    </a>
+    <div class="nav-rights" style="margin-right: 20px">
+        <div class="nav-rights">
+            <a href="login.html">
+                <div></div>
+            </a>
+        </div>
+        <div class="nav-rights">
+            <span id="username"></span>
+        </div>
+
+        <!--</div>-->
+
+    </div>
+</header>
+<div id="container">
+    <div id="sidebar" class="sidebar-fixed">
+        <div id="sidebar-content">
+            <ul id="nav">
+                <li  id="index" class="current delettop delectbac displaynone">
+                    <a href="index.html">
+                        • &nbsp;首页
+                    </a>
+                </li>
+                <li id="down_1" class="li-down displaynone" style="margin-top: 0px!important;">
+                    <a href="table_top.html">
+                        五维总览
+                    </a>
+                </li>
+                <li id="down_9" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        考勤报表
+                    </a>
+                </li>
+                <li id="down_2" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        推广报表
+                    </a>
+                </li>
+                <li id="down_3" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        销售报表
+                    </a>
+                </li>
+                <li id="down_4" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        在线报表
+                    </a>
+                </li>
+                <li id="down_5" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        中端报表
+                    </a>
+                </li>
+                <li id="down_6" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        后端报表
+                    </a>
+                </li>
+                <li id="down_10" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        财务报表
+                    </a>
+                </li>
+                <li id="down_11" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表A
+                    </a>
+                </li>
+                <li id="down_12" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        运营报表B
+                    </a>
+                </li>
+                <li  id="down_8"  class="li-down displaynone">
+                    <a href="chart_leveone.html">
+                        业务图
+
+                    </a>
+                </li>
+                <li id="down_7" class="li-down displaynone">
+                    <a href="javascript:void(0);">
+                        个人中心
+                    </a>
+                    <ul class="sub-menu">
+                        <li>
+                            <a href="insert_user.html">
+                                用户管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="role_user.html">
+                                角色管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="date_manage.html">
+                                数据源管理
+                            </a>
+                        </li>
+                        <li>
+                            <a href="report_manage.html">
+                                报表管理
+                            </a>
+                        </li>
+                    </ul>
+                </li>
+            </ul>
+        </div>
+    </div>
+    <div id="content">
+        <div class="container">
+            <div style="margin-top: 30px;width: 100%;padding-top: 30px;padding-bottom: 30px;background: #ffffff;border-radius: 5px">
+                <div class="input-group" style="width: 100%;margin-left: 30px">
+                    <iframe id="iframe_display" name="iframe_display" style="display: none;"></iframe>
+                    <form enctype="multipart/form-data" action="" method="post" target="iframe_display" id="upload">
+                        <input type="hidden" name="username" id="name"/>
+                        <span>文件上传:</span> <input type="file" name="file" id="files" style="display: inline-block"/>
+                         <input type="submit" value="上传" id="submit">
+                        <div style="margin:20px 0;"><i style="color: red"> *</i>文件最大10M!</div>
+                    </form>
+                </div>
+            </div>
+
+            <table class="usertable"
+                   style="margin-top: 20px">
+                <thead>
+                <tr>
+                    <th>序号</th>
+                    <th>用户名</th>
+                    <th>文件名称</th>
+                    <th>上传时间</th>
+                    <th>操作</th>
+                </tr>
+                </thead>
+                <tbody id="body_table">
+
+                </tbody>
+            </table>
+            <div class="floort" style="height: 40px">
+                <div class="gigantic pagination" style="margin-top: 3px">
+                    <a href="#" class="previous" data-action="previous">&lsaquo;</a>
+                    <input type="text" readonly="readonly"/>
+                    <a href="#" class="next" data-action="next">&rsaquo;</a>
+                </div>
+            </div>
+        </div>
+        <div class="load">
+            <div id="center">
+                <div class="skype-loader">
+                    <div class="dot">
+                        <div class="first"></div>
+                    </div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                    <div class="dot"></div>
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <div class="modal fade" id="myModal" tabindex="-1" role="dialog" aria-labelledby="myModalLabel">
+        <div class="modal-dialog" role="document">
+            <div class="modal-content" style="margin-top: 150px">
+                <div class="modal-header">
+                    <!--<button type="button" class="close" data-dismiss="modal" aria-label="Close"><span
+                            aria-hidden="true">×</span></button>-->
+                    <h5 class="modal-title">提示</h5>
+                </div>
+                <div class="modal-body">
+                    <span id="myModalLabel" style="font-size: 20px;"></span>
+                </div>
+                <div class="modal-footer">
+                    <button type="button" class="btn btn-primary" data-dismiss="modal">关闭</button>
+                </div>
+            </div>
+        </div>
+    </div>
+</div>
+
+</body>
+<script type="text/javascript" src="./assets/js/service/ajax.js"></script>
+<script type="text/javascript" src="./assets/js/service/common.js"></script>
+<script type="text/javascript" src="./assets/js/service/table_four.js"></script>
+</html>
